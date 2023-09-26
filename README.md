@@ -1,13 +1,17 @@
 # Telescope Color Picker Extension
 A [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) extension for picking colorschemes on your system that persists after selection.
 
-Note: This plugin will write to your ~/.config/nvim/init.lua 
+Note: This plugin will write to your`<nvim_config_dir>/init.lua`
 
-### Requirements
+## Usage
+After invoking `Telescope colors` you can browse the available colors using `C-j` `C-n` or `Up arrow`, which will update your colorscheme on each selection.
+Go down using `C-k` `C-p` or `Down arrow`. Hit `<CR>` to persist your selection to the `<nvim_config_dir>/init.lua` file.
+
+## Requirements
 - awk
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) 
 
-### Install
+## Installation
 ```lua
 require("lazy").setup(
     {
@@ -22,18 +26,21 @@ require("lazy").setup(
 )
 ```
 
-### Add extension to Telescope (If not in config above)
+## Add extension to Telescope (If not in config above)
 ```lua
 require("telescope").load_extension("colors")
 
 ```
 
-### Run
+## Run
 ```
 :Telescope colors
 ```
 
-### Mappings
+## Mappings
 ```lua
 vim.keymap("n", "<leader>uC", "<cmd>Telescope colors<CR>", desc = { "Color Picker" })
 ```
+
+## Contributions
+Suggestions, issues and patches are very much welcome.
