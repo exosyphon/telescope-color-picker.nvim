@@ -30,10 +30,10 @@ require("telescope").load_extension("telescope-color-picker")
 
 ### Run
 ```
-:Telescope telescope-color-picker colors
+:Telescope colors
 ```
 
 ### Mappings
 ```lua
-vim.keymap("n", "<leader>uC", "<cmd>Telescope telescope-color-picker colors<CR>", desc = { "Color Picker" })
+vim.keymap("n", "<leader>uC", "<cmd>Telescope colors<CR>", desc = { "Color Picker" })
 ```
