@@ -13,7 +13,7 @@ M.colors = function(opts)
         local cmd = 'colorscheme ' .. selected[1]
         vim.cmd(cmd)
         local init_cmd = 'vim.cmd("' .. cmd .. '")'
-        local init_file = vim.fn.expand(vim.fn.stdpath('config') .. "/colorscheme.lua")
+        local init_file = vim.fn.expand(vim.fn.stdpath('config') .. "/init.lua")
         vim.fn.jobstart("if [[ $(cat " ..
             init_file ..
             " | grep -e 'vim.*cmd.*colorscheme') ]]; then sed -i -e /colorscheme/d " ..
