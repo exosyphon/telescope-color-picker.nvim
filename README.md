@@ -8,7 +8,7 @@ Note: This plugin will write to your ~/.config/nvim/init.lua
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) 
 
 ### Install
-```
+```lua
 require("lazy").setup(
     {
         "exosyphon/telescope-color-picker.nvim",
@@ -23,7 +23,7 @@ require("lazy").setup(
 ```
 
 ### Add extension to Telescope (If not in config above)
-```
+```lua
 require("telescope").load_extension("telescope-color-picker")
 
 ```
@@ -34,6 +34,6 @@ require("telescope").load_extension("telescope-color-picker")
 ```
 
 ### Mappings
-```
-vim.keymap("n", "<leader>uC", "<cmd>Telescope telescope-color-picker colors<CR>")
+```lua
+vim.keymap("n", "<leader>uC", "<cmd>Telescope telescope-color-picker colors<CR>", desc = { "Color Picker" })
 ```
