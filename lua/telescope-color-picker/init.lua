@@ -47,7 +47,7 @@ M.colors = function(opts)
             map("i", "<C-j>", next_color)
             map("i", "<C-k>", prev_color)
             map("i", "<C-n>", next_color)
-            map("i", "<C-k>", prev_color)
+            map("i", "<C-p>", prev_color)
             return true
         end,
     }):find()
