@@ -3,6 +3,6 @@ return require("telescope").register_extension {
     -- access extension config and user config
   end,
   exports = {
-    colors = require("telescope-color-picker").colors(require("telescope.themes").get_dropdown {})
+    colors = require "telescope-color-picker",
   },
 }
