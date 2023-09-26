@@ -1,12 +1,39 @@
 # Telescope Color Picker Extension
+A [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) extension for picking colorschemes on your system that persists after selection.
+
+Note: This plugin will write to your ~/.config/nvim/init.lua 
+
+### Requirements
+- awk
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) 
 
 ### Install
 ```
-require('lazy').setup({ "exosyphon/telescope-color-picker.nvim" })
+require("lazy").setup(
+    {
+        "exosyphon/telescope-color-picker.nvim",
+        dependencies = {
+            { 'nvim-telescope/telescope.nvim' },
+        },
+        config = function()
+              require("telescope").load_extension "telescope-color-picker"
+        end,
+    }
+)
 ```
 
-### Add extension to Telescope
+### Add extension to Telescope (If not in config above)
 ```
-require("telescope").load_extension("color-picker")
+require("telescope").load_extension("telescope-color-picker")
 
+```
+
+### Run
+```
+:Telescope telescope-color-picker colors
+```
+
+### Mappings
+```
+vim.keymap("n", "<leader>uC", "<cmd>Telescope telescope-color-picker colors<CR>")
 ```
