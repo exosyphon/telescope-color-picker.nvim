@@ -53,5 +53,4 @@ M.colors = function(opts)
     }):find()
 end
 
--- M.colors()
 return M
