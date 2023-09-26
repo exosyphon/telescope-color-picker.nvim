@@ -16,7 +16,7 @@ require("lazy").setup(
             { 'nvim-telescope/telescope.nvim' },
         },
         config = function()
-              require("telescope").load_extension "telescope-color-picker"
+              require("telescope").load_extension "colors"
         end,
     }
 )
@@ -24,7 +24,7 @@ require("lazy").setup(
 
 ### Add extension to Telescope (If not in config above)
 ```lua
-require("telescope").load_extension("telescope-color-picker")
+require("telescope").load_extension("colors")
 
 ```
 
